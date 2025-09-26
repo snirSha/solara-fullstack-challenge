@@ -11,37 +11,30 @@ Welcome to Solara AI's senior fullstack engineering challenge. My task was to bu
 6. Users can view real-time status updates and browse their campaign list.
 
 ## Project Structure
-• 	angular-frontend/ – Angular 19 app with Angular Material
-
-• 	nestjs-service/ – NestJS backend with TypeORM and PostgreSQL
-
-• 	python-generator/ – Python service that integrates with Gemini for text generation via HTTP
-
-• 	python-worker/ - Python worker that listens to RabbitMQ and handles image generation using Stable Diffusion
-
-• 	docker-compose.fullstack.yml/ – Full stack orchestration
-
-• 	scripts/seed-db.sh – Script to initialize the database
-
-• 	.env.example – Environment template for backend configuration
-
+- 	angular-frontend/ – Angular 19 app with Angular Material
+- 	nestjs-service/ – NestJS backend with TypeORM and PostgreSQL
+- 	python-generator/ – Python service that integrates with Gemini for text generation via HTTP
+- 	python-worker/ - Python worker that listens to RabbitMQ and handles image generation using Stable Diffusion
+- 	docker-compose.fullstack.yml/ – Full stack orchestration
+- 	scripts/seed-db.sh – Script to initialize the database
+- 	.env.example – Environment template for backend configuration
 
 
 ### Backend Features
-• 	RESTful API with endpoints for creating, viewing, and deleting campaigns
-• 	Integration with Python service via HTTP
-• 	Structured error handling and retries
-• 	Image storage and static serving from /output
-• 	Campaign status tracking (pending, processing, completed, failed)
-• 	RabbitMQ queue for async processing
+- 	RESTful API with endpoints for creating, viewing, and deleting campaigns
+- 	Integration with Python service via HTTP
+- 	Structured error handling and retries
+- 	Image storage and static serving from /output
+- 	Campaign status tracking (pending, processing, completed, failed)
+- 	RabbitMQ queue for async processing
 
 ### Frontend Features
-• 	Campaign creation form with gibberish detection and validation
-• 	Campaign dashboard with filters, status indicators, and previews
-• 	Campaign detail view with full content and metadata
-• 	Retry and delete actions for failed campaigns
-• 	Responsive design with Angular Material
-• 	Auto-refresh for live status updates
+- 	Campaign creation form with gibberish detection and validation
+- 	Campaign dashboard with filters, status indicators, and previews
+- 	Campaign detail view with full content and metadata
+- 	Retry and delete actions for failed campaigns
+- 	Responsive design with Angular Material
+- 	Auto-refresh for live status updates
 
 ### Python Service
 - Receives prompt and campaign metadata from NestJS
