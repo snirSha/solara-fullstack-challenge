@@ -1,0 +1,46 @@
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #222;
+  --card-bg: #ffffff;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  stroke: var(--text-color);
+}
+
+::ng-deep .mat-form-field-label {
+  color: var(--text-color);
+}
+
+::ng-deep .mat-select-value {
+  color: var(--text-color);
+}
+
+::ng-deep .mat-select-arrow {
+  color: var(--text-color);
+}
+
+::ng-deep .mat-select-panel {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+::ng-deep .mat-option {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}

@@ -1,0 +1,40 @@
+:root {
+  --background-gradient: linear-gradient(to right, #f5f7fa, #c3cfe2);
+}
+.dark-mode {
+  --background-gradient: linear-gradient(to right, #232526, #414345);
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--background-gradient); // שימוש במשתנה
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color); // שימוש במשתנה
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color); // שימוש במשתנה
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color); // שימוש במשתנה
+}
+
+mat-form-field {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+button {
+  width: 300px;
+}

@@ -1,0 +1,20 @@
+<h1>Welcome to Campaign AI</h1>
+<p class="intro-text">
+  Create stunning marketing campaigns powered by AI.  
+  Just enter a prompt, and let our system generate compelling content and visuals for you.
+</p>
+
+<h2>Login</h2>
+
+<mat-form-field appearance="fill">
+  <mat-label>User</mat-label>
+  <mat-select [(value)]="selectedUserId" (selectionChange)="onUserSelect($event.value)">
+    <mat-option *ngFor="let user of users" [value]="user.id">
+      {{ user.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="enterApp()" [disabled]="!selectedUserId">
+  Submit
+</button>

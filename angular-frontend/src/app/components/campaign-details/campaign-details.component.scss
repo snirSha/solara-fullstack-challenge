@@ -1,0 +1,69 @@
+:host {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.campaign-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--text-color);
+}
+
+.loading-section,
+.error-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.campaign-card mat-card {
+  padding: 16px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-chip {
+  font-weight: bold;
+}
+
+.image-section {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.generated-image {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .campaign-details-container {
+    padding: 12px;
+  }
+
+  mat-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="campaign-details-container">
+  <h1>Campaign Details</h1>
+
+  <div *ngIf="isLoading" class="loading-section">
+    <mat-spinner></mat-spinner>
+    <p>Loading campaign...</p>
+  </div>
+
+  <div *ngIf="!isLoading && campaign" class="campaign-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ campaign.prompt }}</mat-card-title>
+        <mat-chip [color]="getStatusColor(campaign.status)">
+          <mat-icon>{{ getStatusIcon(campaign.status) }}</mat-icon>
+          {{ campaign.status | titlecase }}
+        </mat-chip>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div *ngIf="campaign.generatedText" class="generated-text" style="margin-bottom: 1rem;">
+          {{ campaign.generatedText }}
+        </div>
+        <div class="image-section" *ngIf="campaign.imagePath; else generating">
+          <img [src]="imageUrl" alt="Generated Image" class="generated-image" loading="lazy" />
+        </div>
+
+        <ng-template #generating>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          <p>Image is still being generated...</p>
+        </ng-template>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <!-- <button mat-raised-button color="primary" (click)="downloadImage()" [disabled]="!campaign.imagePath">
+          <mat-icon>download</mat-icon>
+          Download
+        </button>
+        <button mat-button (click)="copyLink()" [disabled]="!campaign.imagePath">
+          <mat-icon>share</mat-icon>
+          Share Link
+        </button> -->
+        <button mat-stroked-button color="primary" (click)="goBack()" style="align-self: flex-start; margin-bottom: 1rem;">
+          <mat-icon>arrow_back</mat-icon>
+          Back to Campaigns
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div *ngIf="!isLoading && !campaign" class="error-section">
+    <mat-icon color="warn">error</mat-icon>
+    <p>Campaign not found or unauthorized.</p>
+  </div>
+</div>

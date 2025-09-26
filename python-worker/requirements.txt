@@ -1,0 +1,8 @@
+aio-pika
+requests
+Pillow
+diffusers
+torch
+transformers
+accelerate
+httpx
