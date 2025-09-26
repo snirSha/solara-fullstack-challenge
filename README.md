@@ -12,12 +12,19 @@ Welcome to Solara AI's senior fullstack engineering challenge. My task was to bu
 
 ## Project Structure
 • 	angular-frontend/ – Angular 19 app with Angular Material
+
 • 	nestjs-service/ – NestJS backend with TypeORM and PostgreSQL
+
 • 	python-generator/ – Python service that integrates with Gemini for text generation via HTTP
+
 • 	python-worker/ - Python worker that listens to RabbitMQ and handles image generation using Stable Diffusion
+
 • 	docker-compose.fullstack.yml/ – Full stack orchestration
+
 • 	scripts/seed-db.sh – Script to initialize the database
+
 • 	.env.example – Environment template for backend configuration
+
 
 
 ### Backend Features
